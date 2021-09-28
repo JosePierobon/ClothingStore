@@ -1,0 +1,12 @@
+﻿@model List<ClothingStore.Web.Models.PrendasModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Prendas</h2>
+
+@foreach (var prendas in Model)
+{
+    <p>@prendas.Id @prendas.Descripcion</p>
+
+}
