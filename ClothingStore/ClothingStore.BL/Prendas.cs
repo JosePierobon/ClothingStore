@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace ClothingStore.Web.Models
+namespace ClothingStore.BL
 {
-    public class PrendasModel
+   public class Prendas
     {
         public int Id { get; set; }
         public string Descripcion { get; set; }
+        public double Precio { get; set; }
+        
     }
 }

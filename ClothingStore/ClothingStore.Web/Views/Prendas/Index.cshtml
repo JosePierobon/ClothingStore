@@ -1,12 +1,26 @@
-﻿@model List<ClothingStore.Web.Models.PrendasModel>
+﻿@model List<ClothingStore.BL.Prendas>
 @{
     ViewBag.Title = "Index";
 }
 
 <h2>Prendas</h2>
 
-@foreach (var prendas in Model)
-{
-    <p>@prendas.Id @prendas.Descripcion</p>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Código</th>
+            <th>Descripción</th>
+            <th>Precio</th>
+        </tr>
+    </thead>
+    @foreach (var prenda in Model)
+    {
+        <tr>
+            <td>@prenda.Id</td>
+            <td>@prenda.Descripcion</td>
+            <td>@prenda.Precio</td>
+        </tr>    
+    }
 
-}
+    
+</table>
