@@ -16,17 +16,16 @@ namespace ClothingStore.Win
         public Form1()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
             var prendasBL = new PrendasBL();
             var listadePrendas = prendasBL.ObtenerPrendas();
 
-            foreach (var prenda in listadePrendas)
-            {
-                MessageBox.Show(prenda.Descripcion);
-            }
+            listadePrendasBindingSource.DataSource = listadePrendas;
+
+        }
+
+        private void listadePrendasDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
